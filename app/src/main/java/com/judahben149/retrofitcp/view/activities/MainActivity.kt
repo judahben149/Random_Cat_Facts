@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
 
     private var TAG = "mineee"
     private lateinit var binding: ActivityMainBinding
-//    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         supportActionBar!!.setCustomView(R.layout.custom_action_bar)
 
         //instantiate viewmodel
-        Log.d(TAG, "Reached Activity beginning")
         val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+
 
         viewModel.getCurrentData()
 

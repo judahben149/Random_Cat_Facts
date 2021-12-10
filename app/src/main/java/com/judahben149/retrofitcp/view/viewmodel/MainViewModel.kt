@@ -20,9 +20,6 @@ class MainViewModel: ViewModel() {
     val catFact = MutableLiveData<String>()
     var isResponseSuccessful = MutableLiveData<Boolean>(true)
 
-    init {
-        Log.d(TAG, "Instantiated view model")
-    }
 
     fun getCurrentData() {
 
