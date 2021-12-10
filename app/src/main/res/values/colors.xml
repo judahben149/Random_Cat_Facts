@@ -11,4 +11,7 @@
     <color name="orange1">#FF9800</color>
     <color name="orange2">#E66503</color>
     <color name="orange3">#E49252</color>
+    <color name="caramel1">#FFD59A</color>
+    <color name="caramel_light">#FFF4E5</color>
+    <color name="brown1">#CAAA75</color>
 </resources>

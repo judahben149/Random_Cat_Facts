@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Retrofit (CP)</string>
+    <string name="layout_background">Layout background</string>
+    <string name="did_you_know">Did you know?</string>
+    <string name="see_last_fact">See last fact</string>
+    <string name="click_to_retry">Click to retry</string>
+    <string name="click_for_new_fact">Click for new fact</string>
+    <string name="an_error_occured">An error occurred</string>
 </resources>

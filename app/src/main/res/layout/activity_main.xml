@@ -4,24 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activities.MainActivity" >
+    tools:context=".view.activities.MainActivity">
 
-
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_cat_doodles"
-        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/gabriola"
+        android:gravity="center"
+        android:text="@string/did_you_know"
+        android:textColor="#0B0B0B"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/layout_background"
+        android:src="@drawable/ic_cat_doodles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/layout_background"
         android:src="@drawable/ic_cat_doodles"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <androidx.cardview.widget.CardView
@@ -30,7 +42,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="7dp"
         app:cardElevation="7dp"
-
+        app:contentPadding="12dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,25 +54,24 @@
             android:id="@+id/progressBar"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:visibility="visible"
             android:layout_gravity="center"
-            app:cpb_progressbar_width="2dp"
-            app:cpb_background_progressbar_color_direction="top_to_bottom"
-            app:cpb_progress_direction="to_right"
+            android:visibility="visible"
             app:cpb_background_progressbar_color="@color/white"
-            app:cpb_progressbar_color="@color/orange1"
+            app:cpb_background_progressbar_color_direction="top_to_bottom"
             app:cpb_indeterminate_mode="true"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="@color/brown1"
+            app:cpb_progressbar_width="2dp"
             tools:visibility="visible" />
 
         <TextView
-            android:justificationMode="inter_word"
-            android:textColor="#0C0C0C"
-            android:padding="12dp"
             android:id="@+id/tv_catFact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="20sp"
+            android:fontFamily="@font/gabriola"
+            android:justificationMode="inter_word"
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -73,6 +84,20 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_generate_new_fact"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:contentDescription="@string/see_last_fact"
+            android:id="@+id/btn_seeLastFact"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
