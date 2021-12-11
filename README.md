@@ -11,5 +11,5 @@ You can test the application using this link: https://bit.ly/31U4LVl
 Below are previews of the application.
 
 
-![random cat facts](https://user-images.githubusercontent.com/71103838/145653561-f819cbcf-2a48-4e23-b8c7-065882ae21d1.png)
-![random cat facts 2](https://user-images.githubusercontent.com/71103838/145653574-8b3b3cf7-acec-4ef1-aacb-adf14677dd31.png)
+<img src=https://user-images.githubusercontent.com/71103838/145653561-f819cbcf-2a48-4e23-b8c7-065882ae21d1.png width="360" height="691">
+<img src=https://user-images.githubusercontent.com/71103838/145653574-8b3b3cf7-acec-4ef1-aacb-adf14677dd31.png width="352.5" height="696">
