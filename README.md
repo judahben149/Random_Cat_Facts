@@ -5,7 +5,7 @@ The app fetches a new cat fact from this API (https://cat-fact.herokuapp.com) wh
 
 The endpoint (/facts/random) whenever called returns a random fact from the API.
 
-###Test
+### Test
 You can test the application using this link: bit.ly/31U4LVl
 
 Below are previews of the application.
