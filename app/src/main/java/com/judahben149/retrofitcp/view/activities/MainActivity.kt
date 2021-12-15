@@ -23,8 +23,6 @@ import com.judahben149.retrofitcp.databinding.ActivityMainBinding
 import com.judahben149.retrofitcp.view.viewmodel.MainViewModel
 
 
-const val BASE_URL = "https://cat-fact.herokuapp.com"
-
 class MainActivity : AppCompatActivity() {
 
     private var TAG = "mineee"
