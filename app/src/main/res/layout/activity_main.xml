@@ -7,12 +7,12 @@
     tools:context=".view.activities.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/gabriola"
         android:gravity="center"
         android:text="@string/did_you_know"
-        android:textColor="#0B0B0B"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
