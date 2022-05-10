@@ -1,6 +1,8 @@
 package com.judahben149.retrofitcp.view.activities
 
 import android.app.Dialog
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.pm.ActivityInfo
 import android.net.ConnectivityManager
@@ -60,6 +62,10 @@ class MainActivity : AppCompatActivity() {
             setLastFact()
         }
 
+        binding.btnCopyFact.setOnClickListener {
+            copyFact()
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -115,6 +121,16 @@ class MainActivity : AppCompatActivity() {
         binding.tvCatFact.visibility = View.GONE
         binding.progressBar.visibility = View.VISIBLE
         viewModel.getCurrentData()
+    }
+
+    private fun copyFact() {
+        val copiedFact = binding.tvCatFact.text
+
+        val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clipData = ClipData.newPlainText("text", copiedFact)
+        clipboardManager.setPrimaryClip(clipData)
+
+        Snackbar.make(binding.root, "Fact copied!", Snackbar.LENGTH_SHORT).show()
     }
 
 

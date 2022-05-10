@@ -4,21 +4,33 @@ plugins {
 }
 
 android {
+    signingConfigs {
+
+        release {
+            storeFile file('/Users/judahben/Documents/keystores/cat_facts/CatFacts.jks')
+            storePassword 'judahjesus'
+            keyAlias 'juje'
+            keyPassword 'judahjesus'
+        }
+    }
     compileSdk 31
 
     defaultConfig {
         applicationId "com.judahben149.retrofitcp"
         minSdk 28
         targetSdk 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled true
+            shrinkResources true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
