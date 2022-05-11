@@ -1,4 +1,4 @@
-package com.judahben149.retrofitcp.view.activities
+package com.judahben149.retrofitcp.ui.view.activities
 
 import android.content.Intent
 import android.os.Bundle

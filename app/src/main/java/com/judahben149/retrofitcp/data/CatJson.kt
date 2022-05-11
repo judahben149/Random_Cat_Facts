@@ -1,4 +1,4 @@
-package com.judahben149.retrofitcp.api
+package com.judahben149.retrofitcp.data
 
 data class CatJson(
     val __v: Int,

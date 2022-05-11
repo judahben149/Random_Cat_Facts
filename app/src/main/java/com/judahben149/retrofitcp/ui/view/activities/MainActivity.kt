@@ -1,13 +1,10 @@
-package com.judahben149.retrofitcp.view.activities
+package com.judahben149.retrofitcp.ui.view.activities
 
 import android.app.Dialog
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.pm.ActivityInfo
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,8 +18,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.judahben149.retrofitcp.R
+import com.judahben149.retrofitcp.ViewModelFactory
 import com.judahben149.retrofitcp.databinding.ActivityMainBinding
-import com.judahben149.retrofitcp.view.viewmodel.MainViewModel
+import com.judahben149.retrofitcp.repository.MainRepository
+import com.judahben149.retrofitcp.ui.viewmodel.MainViewModel
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private var TAG = "mineee"
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: MainViewModel
+    private lateinit var repository: MainRepository
 
     private lateinit var lastFacts: Array<String>
 
@@ -49,7 +49,10 @@ class MainActivity : AppCompatActivity() {
         lastFacts = arrayOf("", "Click for new fact")
 
         //instantiate viewmodel
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        repository = MainRepository()
+        val factory = ViewModelFactory(repository)
+
+        viewModel = ViewModelProvider(this, factory)[MainViewModel::class.java]
 
         getNewFact()
         setupObservers()
@@ -65,7 +68,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnCopyFact.setOnClickListener {
             copyFact()
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

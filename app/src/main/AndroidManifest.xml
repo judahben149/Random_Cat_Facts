@@ -13,13 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RetrofitCP">
         <activity
-            android:name=".view.activities.MainActivity"
+            android:name="com.judahben149.retrofitcp.ui.view.activities.MainActivity"
             android:exported="true">
 
         </activity>
 
         <activity
-            android:name=".view.activities.SplashScreenActivity"
+            android:name="com.judahben149.retrofitcp.ui.view.activities.SplashScreenActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
