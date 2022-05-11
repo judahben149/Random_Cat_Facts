@@ -1,13 +1,10 @@
-package com.judahben149.retrofitcp.view.activities
+package com.judahben149.retrofitcp.ui.view.activities
 
 import android.app.Dialog
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.pm.ActivityInfo
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,7 +19,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.judahben149.retrofitcp.R
 import com.judahben149.retrofitcp.databinding.ActivityMainBinding
-import com.judahben149.retrofitcp.view.viewmodel.MainViewModel
+import com.judahben149.retrofitcp.ui.viewmodel.MainViewModel
 
 
 class MainActivity : AppCompatActivity() {
@@ -65,7 +62,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnCopyFact.setOnClickListener {
             copyFact()
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

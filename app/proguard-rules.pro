@@ -21,9 +21,9 @@
 #-renamesourcefileattribute SourceFile
 
 -keep class com.judahben149.retrofitcp.*
--keep interface com.judahben149.retrofitcp.ApiRequests
+-keep interface com.judahben149.retrofitcp.api.ApiService
 #-keep class com.judahben149.retrofitcp.api.*
-#-keep class com.judahben149.retrofitcp.ApiRequests
+#-keep class com.judahben149.retrofitcp.api.ApiRequests
 
 
 

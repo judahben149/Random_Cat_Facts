@@ -1,10 +1,10 @@
-package com.judahben149.retrofitcp.view.viewmodel
+package com.judahben149.retrofitcp.ui.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.judahben149.retrofitcp.ApiRequests
+import com.judahben149.retrofitcp.api.ApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -32,7 +32,7 @@ class MainViewModel: ViewModel() {
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiRequests::class.java)
+            .create(ApiService::class.java)
 
 
         viewModelScope.launch(Dispatchers.IO) {
